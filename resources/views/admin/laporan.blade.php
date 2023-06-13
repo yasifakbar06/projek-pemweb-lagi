@@ -27,12 +27,12 @@
                         <td>{{ date('D, d M Y', strtotime($item->tanggal)) }}</td>
                         <td>{{ $item->nama_alat }}</td>
                         <td>{{ $item->name }}</td>
-                        <td style="text-align: right"><b>@money($item->harga)</b></td>
+                        <td style="text-align: right"><b><?php echo number_format($item->harga , 0); ?></b></td>
                     </tr>
                     @endforeach
                     <tr>
                         <td colspan="4"></td>
-                        <td style="text-align: right"><b>@money($total)</b></td>
+                        <td style="text-align: right"><b><?php echo number_format($total , 0); ?></b></td>
                     </tr>
                 </tbody>
             </table>

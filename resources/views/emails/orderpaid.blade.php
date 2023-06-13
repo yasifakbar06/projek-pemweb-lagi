@@ -10,10 +10,10 @@ Pembayaran anda telah terkonfirmasi. Silakan ambil alat pada tanggal dan jam pen
 | Alat       | Durasi         | Harga  |
 | ------------- |:-------------:| --------:|
 @foreach ($payment->order as $item)
-| {{$item->alat->nama_alat}} | {{ $item->durasi }} Jam | @money($item->harga) |
+| {{$item->alat->nama_alat}} | {{ $item->durasi }} Jam | <?php echo number_format($item->harga , 0); ?> |
 @endforeach
 @endcomponent
-<b>Telah Melakukan Pembayaran sebesar @money($payment->total)</b><br><br>
+<b>Telah Melakukan Pembayaran sebesar <?php echo number_format($payment->total , 0); ?></b><br><br>
 Thanks,<br>
 {{ config('app.name') }}
 @endcomponent

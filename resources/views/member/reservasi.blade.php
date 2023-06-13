@@ -18,7 +18,7 @@
                     @forelse ($reservasi as $item)
                         <tr>
                             <td>{{ date('D, d M Y H:i', strtotime($item->order->first()->starts)) }}</td>
-                            <td>@money($item->total) &nbsp; <span class="badge bg-secondary">{{ $item->order->count() }} Alat</span>
+                            <td><?php echo number_format($item->total , 0); ?> &nbsp; <span class="badge bg-secondary">{{ $item->order->count() }} Alat</span>
                                 @if ($item->status == 1)
                                     <span class="badge bg-warning">Sedang Ditinjau</span>
                                 @elseif ($item->status == 2)
@@ -54,7 +54,7 @@
                     @foreach ($riwayat as $r)
                         <tr>
                             <td>{{ date('D, d M Y H:i', strtotime($r->order->first()->starts)) }}</td>
-                            <td>@money($r->total) &nbsp; <span class="badge bg-secondary">{{ $r->order->count() }} Alat</span>
+                            <td><?php echo number_format($r->total , 0); ?> &nbsp; <span class="badge bg-secondary">{{ $r->order->count() }} Alat</span>
                                 <span class="badge bg-secondary">Selesai</span>
                             </td>
                             <td><a class="btn btn-primary" href="{{ route('order.detail',['id' => $r->id]) }}">Detail</a></td>

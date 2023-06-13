@@ -4,7 +4,7 @@ Reservasi anda telah disetujui oleh Admin.
 langkah selanjutnya adalah nelakukan pembayaran melalui transfer melalui ATM ke rekening :
 
 ## BNI xxxxxxxxxx a/n Dendra Kurnianto
-## Jumlah Pembayaran : @money($payment->total)
+## Jumlah Pembayaran : <?php echo number_format($payment->total , 0); ?>
 
 setelah pembayaran, silakan upload bukti bayar pada website
 
@@ -16,7 +16,7 @@ setelah pembayaran, silakan upload bukti bayar pada website
 | Alat       | Durasi         | Harga  |
 | ------------- |:-------------:| --------:|
 @foreach ($payment->order as $item)
-| {{$item->alat->nama_alat}} | {{ $item->durasi }} Jam | @money($item->harga) |
+| {{$item->alat->nama_alat}} | {{ $item->durasi }} Jam | <?php echo number_format($item->harga , 0); ?> |
 @endforeach
 @endcomponent
 

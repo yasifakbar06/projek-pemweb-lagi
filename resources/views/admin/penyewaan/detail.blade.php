@@ -75,7 +75,7 @@
                                     @endif
                                 </td>
                                 <td>{{ date('d M Y H:i', strtotime($item->ends)) }}</td>
-                                <td style="text-align: right"><b>@money($item->harga)</b></td>
+                                <td style="text-align: right"><b><?php echo number_format($item->harga , 0); ?></b></td>
                             </tr>
                             @endforeach
                             <tr>
@@ -86,7 +86,7 @@
                                 </td>
                                 <td></td>
                                 <td style="text-align: right"><b>Total</b></td>
-                                <td style="text-align: right"><b>@money($total)</b></td>
+                                <td style="text-align: right"><b><?php echo number_format($total , 0); ?></b></td>
                             </tr>
                         </form>
                         </tbody>
