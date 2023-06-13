@@ -38,9 +38,9 @@
                                         <form action="{{ route('cart.store',['id' => $item->id, 'userId' => $user->id]) }}" method="POST">
                                             @csrf
                                             <div class="d-block">
-                                                <button type="submit" class="btn btn-success w-100 mt-2" name="btn" value="24"><i class="fas fa-shopping-cart"></i><?php echo number_format($alat->harga24 , 0); ?> <b>24jam</b></button>
-                                                <button type="submit" class="btn btn-success w-100 mt-2" name="btn" value="12"><i class="fas fa-shopping-cart"></i><?php echo number_format($alat->harga12 , 0); ?> <b>12jam</b></button>
-                                                <button type="submit" class="btn btn-success w-100 mt-2" name="btn" value="6"><i class="fas fa-shopping-cart"></i> <?php echo number_format($alat->harga6 , 0); ?> <b>6jam</b></button>
+                                                <button type="submit" class="btn btn-success w-100 mt-2" name="btn" value="24"><i class="fas fa-shopping-cart"></i><?php echo number_format($item->harga24 , 0)?> <b>24jam</b></button>
+                                                <button type="submit" class="btn btn-success w-100 mt-2" name="btn" value="12"><i class="fas fa-shopping-cart"></i> <?php echo number_format($item->harga12 , 0)?> <b>12jam</b></button>
+                                                <button type="submit" class="btn btn-success w-100 mt-2" name="btn" value="6"><i class="fas fa-shopping-cart"></i> <?php echo number_format($item->harga6 , 0)?> <b>6jam</b></button>
                                             </div>
                                         </form>
                                     </div>
