@@ -46,15 +46,15 @@
                                 <small>{{ $item->deskripsi }}</small><br>
                                 <hr>
                                 <div class="d-flex w-100 justify-content-between">
-                                    <small class="mb-1"><b>@money($item->harga24)</b></small>
+                                    <small class="mb-1"><b><?php echo number_format($item->harga24 , 0); ?></b></small>
                                     <small><b>24jam</b></small>
                                 </div>
                                 <div class="d-flex w-100 justify-content-between">
-                                    <small class="mb-1"><b>@money($item->harga12)</b></small>
+                                    <small class="mb-1"><b><?php echo number_format($item->harga12 , 0)?></b></small>
                                     <small><b>12jam</b></small>
                                 </div>
                                 <div class="d-flex w-100 justify-content-between">
-                                    <small class="mb-1"><b>@money($item->harga6)</b></small>
+                                    <small class="mb-1"><b><?php echo number_format($item->harga6 , 0)?></b></small>
                                     <small><b>6jam</b></small>
                                 </div>
                             </div>
@@ -66,9 +66,9 @@
                                             Tambah ke Keranjang
                                         </button>
                                         <ul class="dropdown-menu" aria-labelledby="addtocartdropdown">
-                                            <li><button type="submit" class="dropdown-item" name="btn" value="24"><i class="fas fa-shopping-cart"></i> @money($item->harga24) <b>24jam</b></button></li>
-                                            <li><button type="submit" class="dropdown-item" name="btn" value="12"><i class="fas fa-shopping-cart"></i> @money($item->harga12) <b>12jam</b></button></li>
-                                            <li><button type="submit" class="dropdown-item" name="btn" value="6"><i class="fas fa-shopping-cart"></i> @money($item->harga6) <b>6jam</b></button></li>
+                                            <li><button type="submit" class="dropdown-item" name="btn" value="24"><i class="fas fa-shopping-cart"></i> <?php echo number_format($item->harga24 , 0)?> <b>24jam</b></button></li>
+                                            <li><button type="submit" class="dropdown-item" name="btn" value="12"><i class="fas fa-shopping-cart"></i> <?php echo number_format($item->harga12 , 0)?> <b>12jam</b></button></li>
+                                            <li><button type="submit" class="dropdown-item" name="btn" value="6"><i class="fas fa-shopping-cart"></i> <?php echo number_format($item->harga6 , 0)?> <b>6jam</b></button></li>
                                         </ul>
                                     </div>
                                 </form>
@@ -92,7 +92,7 @@
                         <div class="list-group-item list-group-item-action" aria-current="true">
                           <div class="d-flex w-100 justify-content-between">
                             <h6 class="mb-1">{{ $item->alat->nama_alat }}</h6>
-                            <b>@money($item->harga)</b>
+                            <b><?php echo number_format($item->harga , 0)?></b>
                           </div>
                           <div class="d-flex w-100 justify-content-between">
                             <p class="mb-1">{{ $item->durasi }} Jam </p>
@@ -112,7 +112,7 @@
             <div class="card-body">
                 <div class="d-flex w-100 justify-content-between mb-2">
                     <b>Total</b>
-                    <b>@money($total)</b>
+                    <b><?php echo number_format($total , 0)?></b>
                 </div>
                 <form action="{{ route('order.create') }}" method="POST">
                     @csrf

@@ -32,9 +32,9 @@
                         </div>
                         <img class="card-img-top" src="{{ url('') }}/images/{{ $detail->gambar }}" alt="">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">@money( $detail->harga24 )<span class="badge bg-light text-dark" style="float: right;">24 Jam</span></li>
-                            <li class="list-group-item">@money( $detail->harga12 )<span class="badge bg-light text-dark" style="float: right;">12 Jam</span></li>
-                            <li class="list-group-item">@money( $detail->harga6 )<span class="badge bg-light text-dark" style="float: right;">6 Jam</span></li>
+                            <li class="list-group-item"><?php echo number_format($alat->harga24 , 0); ?><span class="badge bg-light text-dark" style="float: right;">24 Jam</span></li>
+                            <li class="list-group-item"><?php echo number_format($alat->harga12 , 0); ?><span class="badge bg-light text-dark" style="float: right;">12 Jam</span></li>
+                            <li class="list-group-item"><?php echo number_format($alat->harga6 , 0); ?><span class="badge bg-light text-dark" style="float: right;">6 Jam</span></li>
                         </ul>
                     </div>
                 </div>
@@ -48,9 +48,9 @@
                             <form action="{{ route('cart.store',['id' => $detail->id, 'userId' => Auth::user()->id]) }}" method="POST">
                                 @csrf
                                 <div class="d-flex">
-                                    <button type="submit" class="btn btn-success mx-2" name="btn" value="24"><i class="fas fa-shopping-cart"></i> @money($detail->harga24) <b>24jam</b></button>
-                                    <button type="submit" class="btn btn-success mx-2" name="btn" value="12"><i class="fas fa-shopping-cart"></i> @money($detail->harga12) <b>12jam</b></button>
-                                    <button type="submit" class="btn btn-success mx-2" name="btn" value="6"><i class="fas fa-shopping-cart"></i> @money($detail->harga6) <b>6jam</b></button>
+                                    <button type="submit" class="btn btn-success mx-2" name="btn" value="24"><i class="fas fa-shopping-cart"></i> <?php echo number_format($detail->harga24 , 0); ?> <b>24jam</b></button>
+                                    <button type="submit" class="btn btn-success mx-2" name="btn" value="12"><i class="fas fa-shopping-cart"></i> <?php echo number_format($detail->harga12 , 0); ?> <b>12jam</b></button>
+                                    <button type="submit" class="btn btn-success mx-2" name="btn" value="6"><i class="fas fa-shopping-cart"></i> <?php echo number_format($detail->harga6 , 0); ?> <b>6jam</b></button>
                                 </div>
                             </form>
                             <p class="text-muted">Anda sedang login sebagai <b>{{ Auth::user()->name }}</b></p>

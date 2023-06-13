@@ -85,9 +85,9 @@
                                                 <h6 class="card-title">{{ $alat->nama_alat }}</h6>
                                             </div>
                                             <ul class="list-group list-group-flush">
-                                                <li class="list-group-item">@money($alat->harga24)<span class="badge bg-light text-dark" style="float: right;">24 Jam</span></li>
-                                                <li class="list-group-item">@money($alat->harga12)<span class="badge bg-light text-dark" style="float: right;">12 Jam</span></li>
-                                                <li class="list-group-item">@money($alat->harga6)<span class="badge bg-light text-dark" style="float: right;">6 Jam</span></li>
+                                                <li class="list-group-item"><?php echo number_format($alat->harga24 , 0); ?><span class="badge bg-light text-dark" style="float: right;">24 Jam</span></li>
+                                                <li class="list-group-item"><?php echo number_format($alat->harga12 , 0); ?><span class="badge bg-light text-dark" style="float: right;">12 Jam</span></li>
+                                                <li class="list-group-item"><?php echo number_format($alat->harga6 , 0); ?><span class="badge bg-light text-dark" style="float: right;">6 Jam</span></li>
                                             </ul>
                                             <div class="card-footer">
                                                 <div class="btn-group" role="group">
