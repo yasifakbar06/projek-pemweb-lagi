@@ -19,19 +19,19 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'Yasif',
                 'email' => 'yasif@gmail.com',
-                'password' => Hash::make('yasif'),
+                'password' => Hash::make('yasif2002'),
                 'role' => 2
             ],
             [
                 'name' => 'Fahru',
                 'email' => 'fahru@gmail.com',
-                'password' => Hash::make('fahru'),
+                'password' => Hash::make('fahru2002'),
                 'role' => 1
             ],
             [
                 'name' => 'Zein',
                 'email' => 'zein@gmail.com',
-                'password' => Hash::make('zein'),
+                'password' => Hash::make('zein2002'),
                 'role' => 0
             ]
         ]);

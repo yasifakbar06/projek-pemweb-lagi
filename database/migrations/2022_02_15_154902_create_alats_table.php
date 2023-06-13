@@ -13,7 +13,7 @@ class CreateAlatsTable extends Migration
      */
     public function up()
     {
-        Schema::create('alats', function (Blueprint $table) {
+        Schema::create('rental', function (Blueprint $table) {
             $table->id();
             $table->foreignId('kategori_id')->references('id')->on('categories')->onDelete('cascade');
             $table->string('nama_alat');
