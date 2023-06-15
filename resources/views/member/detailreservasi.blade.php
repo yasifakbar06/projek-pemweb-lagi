@@ -69,8 +69,8 @@
                 <div class="alert {{ ($detail->first()->payment->bukti == NULL) ? 'alert-primary' : 'alert-success'}}">
                     @if ($detail->first()->payment->bukti == NULL)
                         Reservasi anda telah disetujui, silakan bayar sesuai dengan total yang tertera dengan cara transfer ke
-                        <h4><b>BNI xxxxxxxxxx</b></h5>
-                        <h6><b>a.n Dendra Kurnianto</b></h6>
+                        <h4><b>BCA xxxxxxxxxx</b></h5>
+                        <h6><b>a.n Muhammad Yasif Akbar</b></h6>
                         lalu upload bukti bayar dengan menekan tombol dibawah.
                     @else
                         Bukti pembayaran telah di upload, silakan tunggu konfirmasi dari Admin
