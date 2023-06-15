@@ -31,7 +31,7 @@ class OrderPaid extends Mailable
      */
     public function build()
     {
-        return $this->from('support@kanciltest.tigasumbu.xyz', 'Kancil Rental Online')
+        return $this->from('support@panorama.xyz', 'Panorama Rental Online')
                     ->subject('Pembayaran Berhasil!')
                     ->markdown('emails.orderpaid');
     }
