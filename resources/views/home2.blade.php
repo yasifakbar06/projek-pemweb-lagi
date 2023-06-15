@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Kancil Rental Kamera Purwokerto</title>
+        <title>Panorama Rental Kamera</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <link href="css/styles.css" rel="stylesheet" />
     </head>
@@ -34,7 +34,7 @@
         </nav>
         <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
             <div class="col-md-5 p-lg-5 mx-auto my-3">
-                <h1 class="display-4 fw-normal">Kancil Rental Online</h1>
+                <h1 class="display-4 fw-normal">Panorama Rental Online</h1>
                 <p class="fw-normal">Cek Ketersediaan - Reservasi - Bayar - Ambil - Jangan lupa balikin</p>
                 @if (!Auth::check())
                 <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#loginModal">Login / Daftar</button>
@@ -117,10 +117,6 @@
                 @endforeach
             </div>
         </div>
-
-        <footer class="py-5 bg-dark">
-            <div class="container px-4"><p class="m-0 text-center text-white">&copy; 2022 Kancil Rental Kamera</p></div>
-        </footer>
 
         <!-- Modal -->
         <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

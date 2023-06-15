@@ -3,7 +3,7 @@
 Reservasi anda telah disetujui oleh Admin.
 langkah selanjutnya adalah nelakukan pembayaran melalui transfer melalui ATM ke rekening :
 
-## BNI xxxxxxxxxx a/n Dendra Kurnianto
+## BCA xxxxxxxxxx a/n Muhammad Yasif Akbar
 ## Jumlah Pembayaran : <?php echo number_format($payment->total , 0); ?>
 
 setelah pembayaran, silakan upload bukti bayar pada website

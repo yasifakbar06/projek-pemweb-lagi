@@ -13,7 +13,7 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="mainNav">
             <div class="container px-4">
-                <a class="navbar-brand" href="{{ route('home') }}">Kancil Rental Kamera</a>
+                <a class="navbar-brand" href="{{ route('home') }}">Panorama Rental Kamera</a>
             </div>
         </nav>
         <div class="container mt-4 px-3">
@@ -39,7 +39,7 @@
                         @error('password')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
-                        <small class="text-muted">No Telepon disarankan menggunakan nomor yang terhubung dengan whastapp.</small>
+                        <small class="text-muted">No Telepon disarankan menggunakan nomor yang terhubung dengan whatsapp.</small>
                         <div class="form-floating mb-2">
                             <input type="text" name="telepon" class="form-control" id="floatingtelp" placeholder="Nomor Telepon" value="{{ old('telepon') }}" required>
                             <label for="floatingtelp">No Telepon</label>
