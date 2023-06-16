@@ -77,7 +77,7 @@ class OrderController extends Controller
     public function acc(Request $request, $paymentId) {
         $orders = $request->order;
         $payment = new Payment();
-
+        if (is_array($orders) || is_object($orders))
         foreach($orders as $o) {
             Order::where('id', $o)->update(['status' => 2]);
         }
@@ -85,8 +85,7 @@ class OrderController extends Controller
         Order::where('payment_id', $paymentId)->where('status', 1)->update(['status' => 3]);
         $payment->where('id', $paymentId)->update(['total' => Order::where('payment_id', $paymentId)->where('status', 2)->sum('harga')]);
 
-        Mail::to($payment->find($paymentId)->user->email)->send(new OrderAccepted($payment->find($paymentId)));
-
+        
         return back();
     }
 
@@ -115,8 +114,7 @@ class OrderController extends Controller
             'status' => 3
         ]);
 
-        Mail::to($payment->user->email)->send(new OrderPaid($payment));
-        return back();
+               return back();
     }
 
     public function alatkembali($id) {
