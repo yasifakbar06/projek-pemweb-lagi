@@ -8,6 +8,15 @@
         <title>Panorama Rental Kamera</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .position-relative.overflow-hidden.p-3.p-md-5.m-md-3.text-center.bg-light {
+                background-image: url('https://cdn.pixabay.com/photo/2016/11/26/21/01/panorama-1861658_1280.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                color: white;
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -37,7 +46,7 @@
                 <h1 class="display-4 fw-normal">Panorama Rental Online</h1>
                 <p class="fw-normal">Cek Ketersediaan - Reservasi - Bayar - Ambil - Jangan lupa balikin</p>
                 @if (!Auth::check())
-                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#loginModal">Login / Daftar</button>
+                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#loginModal" style="color: white;">Login / Daftar</button>
                 @endif
             </div>
         </div>
